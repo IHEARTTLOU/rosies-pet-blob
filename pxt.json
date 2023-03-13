@@ -3,8 +3,8 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "bluetooth-max6675": "github:microsoft/pxt-bluetooth-max6675#v0.0.8"
     },
     "files": [
         "main.blocks",

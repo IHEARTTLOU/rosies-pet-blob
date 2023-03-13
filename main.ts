@@ -1,22 +1,12 @@
 input.onButtonPressed(Button.A, function () {
-    music.playMelody("A F E F D G E E ", 103)
+    music.playMelody("A C5 B C5 B B A G ", input.temperature())
     basic.showIcon(IconNames.Silly)
     basic.showString("Bleh")
+    basic.showIcon(IconNames.Asleep)
 })
-input.onButtonPressed(Button.B, function () {
+input.onSound(DetectedSound.Loud, function () {
     music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.OnceInBackground)
     basic.showIcon(IconNames.Skull)
-})
-input.onGesture(Gesture.Shake, function () {
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . . . .
-        . # # # .
-        . . . . .
-        `)
-    basic.showIcon(IconNames.Sad)
-    soundExpression.sad.playUntilDone()
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showIcon(IconNames.Happy)
